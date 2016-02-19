@@ -1,1 +1,0 @@
-Thought Log Ruby Shoes
