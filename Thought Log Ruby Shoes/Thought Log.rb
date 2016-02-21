@@ -1,12 +1,26 @@
- Shoes.app (:title => "Thought Log" :resizable => true)
-{
-name = ask "Enter your name:"
-if name == "Gian"
-  alert "Welcome back Inventor Gian. You thoughts will be safe with me."
-else
-  alert "Hello, " + name + "!"
+Shoes.app do
+  stack :margin => 10 do
+    @edit = edit_box :width => 1.0 do
+      @para.text = @edit.text
+    end
+    @para = para ""
+  end
 end
-}
+
+Shoes.app do
+  stack :margin => 10 do
+    para "Enter your name:" do
+      @edit = edit_box :width => 1.0 do
+        if name == "Gian"
+          @para.text = "Welcome back Inventor Gian. You thoughts will be safe with me."
+        else
+          @para.text = "Hello, " + name + "!"
+        end
+      end
+    end
+  end
+end
+
 situation = ask "Please enter your situation:"
 thoughts = ask "Please enter your thoughts:"
 emotions = ask "Please enter your emotions:"
