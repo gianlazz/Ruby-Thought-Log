@@ -1,5 +1,5 @@
- Shoes.app
-
+ Shoes.app (:title => "Thought Log" :resizable => true)
+{
 name = ask "Enter your name:"
 if name == "Gian"
   alert "Welcome back Inventor Gian. You thoughts will be safe with me."
@@ -42,7 +42,7 @@ time = Time.now
 time_string = time.inspect.to_s
 
 alert time_string
-
+}
 open('Ruby Thought Log.txt', 'a') do |f|
   f.puts(time_string + "\n" + name + "\n" +
     "Situation: " + situation + "\n" +
