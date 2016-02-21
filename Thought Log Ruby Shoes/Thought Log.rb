@@ -6,7 +6,7 @@ if name == "Gian"
 else
   alert "Hello, " + name + "!"
 end
-
+}
 situation = ask "Please enter your situation:"
 thoughts = ask "Please enter your thoughts:"
 emotions = ask "Please enter your emotions:"
@@ -42,7 +42,7 @@ time = Time.now
 time_string = time.inspect.to_s
 
 alert time_string
-}
+
 open('Ruby Thought Log.txt', 'a') do |f|
   f.puts(time_string + "\n" + name + "\n" +
     "Situation: " + situation + "\n" +
